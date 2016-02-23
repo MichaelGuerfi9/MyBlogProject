@@ -3,7 +3,7 @@ require_once("model/connexion.php");
 global $pdo;
 session_start();
 if(!isset($_SESSION['user'])){
-    header("Location: /login.php");
+    header("Location: login.php");
     exit;
 }
 ?>
@@ -15,5 +15,9 @@ if(!isset($_SESSION['user'])){
 </head>
 <body>
 <h1>Bonjour <?php echo $_SESSION['user']; ?></h1>
+
+<form method="POST" action="login.php">
+    <input type="submit" name="logout" value="Logout">
+</form>
 </body>
 </html>
