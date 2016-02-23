@@ -1,5 +1,5 @@
 <?php
-require_once("model/connexion.php");
+require_once("../config/connexion.php");
 global $pdo;
 session_start();
 if(!isset($_SESSION['user'])){
