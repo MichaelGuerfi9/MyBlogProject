@@ -1,5 +1,5 @@
 <?php
-require_once('../config/conf.php');
+require_once('../model/connexion.php');
 $errors = '';
 $success = '';
 $formOK = true;
