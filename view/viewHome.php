@@ -1,6 +1,12 @@
-<?php $titre = 'Pokémaniac'; ?>
+<?php $titre = 'Pokémaniac  | Acceuil'; ?>
 
-<?php ob_start(); ?>
+<?php 
+session_start();
+ob_start(); 
+if(isset($_POST['logout'])){
+  unset($_SESSION['user']);
+}
+?>
 <?php foreach ($article as $articles): ?>
     <article>
             <a href="<?= "index.php?action=article&id=" . $articles['art_id'] ?>">
