@@ -1,5 +1,5 @@
 <?php
-    require_once('model/connectBDD.php');
+    require_once('../config/connectBDD.php');
     class articleModel{
         function getArticles(){
             global $bdd;

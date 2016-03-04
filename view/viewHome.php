@@ -1,18 +1,22 @@
-<?php $titre = 'Pokémaniac  | Acceuil'; ?>
-
-<?php 
+<?php $titre = 'Pokémaniac  | Acceuil';
 session_start();
-ob_start(); 
-if(isset($_POST['logout'])){
-  unset($_SESSION['user']);
+?>
+
+<?php
+
+ob_start();
+if (isset($_POST['logout'])) {
+    unset($_SESSION['user']);
 }
 ?>
-<?php foreach ($article as $articles): ?>
+<?php
+
+foreach ($article as $articles): ?>
     <article>
-            <a href="<?= "index.php?action=article&id=" . $articles['art_id'] ?>">
-                <h1 class="titreArticle"><?= $articles['art_title'] ?></h1>
-            </a>
-            <time><?= $articles['art_date'] ?></time>
+        <a href="<?= "index.php?action=article&id=" . $articles['art_id'] ?>">
+            <h1 class="titreArticle"><?= $articles['art_title'] ?></h1>
+        </a>
+        <time><?= $articles['art_date'] ?></time>
         <p><?= $articles['art_content'] ?></p>
     </article>
 <?php endforeach; ?>
