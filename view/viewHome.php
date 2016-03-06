@@ -1,7 +1,8 @@
-<?php $titre = 'Pokémaniac  | Acceuil'; ?>
-
-<?php 
+<?php $titre = 'Pokémaniac  | Acceuil';
 session_start();
+?>
+
+<?php
 ob_start(); 
 if(isset($_POST['logout'])){
   unset($_SESSION['user']);

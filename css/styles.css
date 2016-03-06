@@ -44,6 +44,7 @@ header{
 	font-size: 2rem;
 	height: 100%;
 	line-height: 2;
+	z-index: 900;
 }
 
 #blogTitle a{
@@ -61,7 +62,6 @@ header{
 	bottom: 0;
 	color: #95A7B7;
 	right: 100%;
-	overflow: auto;
 	position: fixed;
 	top: 0;
 	width: 25%;
@@ -78,7 +78,6 @@ body.show_sidebar #push_sidebar {
 #wrapper {
 	margin-left: 0;
 	height: 100%;
-	overflow: hidden;
 	width: 100%;
 	
 	-webkit-transition: all .5s ease;
@@ -150,7 +149,7 @@ article img{
 }
 
 .onglets{
-	width: 50%;
+	width: 35%;
 	color: white;
 }
 

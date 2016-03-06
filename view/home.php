@@ -13,10 +13,8 @@
 <body>
     <div id="push_sidebar">
         <ul class="list-unstyled">
-            <li><a href="#"><div class="fa fa-home"></div>Acceuil</a></li>
+            <li><a href="#"><div class="fa fa-home"></div>Accueil</a></li>
             <li><a href="#"><div class="fa fa-pokedex"></div>Pokédex</a></li>
-            <li><a href="#"><div class="fa fa-tips"></div>Astuces</a></li>
-            <li><a href="#"><div class="fa fa-contact"></div>Contact</a></li>
             <?php
                 if(isset($_SESSION['user'])){
                     echo '<li><a href="#"><div class="fa fa-user"></div>'.$_SESSION['user'].'</a></li><li><a href="#"><div class="fa fa-deco"></div>Deconnexion</a></li>';
@@ -30,13 +28,16 @@
     <header class="header">
         <div class="nav_trigger" id='hamburgerMenu'><img id='imgHamburgerMenu' src='images/hamburgerMenu.png'></div>
         <ul class='onglets part1'>
-            <li>Acceuil</li>
-            <li>PokéDex</li>
+            <li>Accueil</li>
         </ul>
         <div id='blogTitle'><a href="index.php">PokéManiac</a></div>
         <ul class='onglets part2'>
-            <li>Astuces</li>
             <li>PokéDex</li>
+            <?php
+            if(!$_SESSION['user']){
+                '<li>Inscription</li>';
+            }
+            ?>
         </ul>
     </header>
     <div class="container">
@@ -44,30 +45,27 @@
     </div>
     <!--<aside>
         <?php
-            /*if(isset($_SESSION['user'])){
+            if(isset($_SESSION['user'])){
                 echo "Bonjour ".$_SESSION['user']."
                 <form method='POST'>
                     <input type='submit' name='logout' value='Logout'>
                 </form>";
             }else{
             echo "<div class='loginBlock'>
-                <form name='userConnexion' method='POST' action='view/viewLogin.php'>
+                <form name='userConnexion' method='POST' action='viewLogin.php'>
                     <input type='submit' value='Se connecter'>
                 </form>
                 ou
-                <form name='userRegister' method='POST' action='view/viewRegister.php'>
+                <form name='userRegister' method='POST' action='viewRegister.php'>
                     <input type='submit' value='S inscrire'>
                 </form>
             </div>";
-        }*/
+        }
         ?>
     </aside>-->
     </div>
     <script>
-        $(".nav_trigger").click(function() {
-            $("body").toggleClass("show_sidebar");
-            $(".nav_trigger .fa").toggleClass("fa-navicon fa-times"); // toggle 2 classes in Jquery: http://goo.gl/3uQAFJ - http://goo.gl/t6BQ9Q
-        });
+
     </script>
 </body>
 </html>
