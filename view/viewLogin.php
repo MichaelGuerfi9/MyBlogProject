@@ -1,5 +1,5 @@
 <?php
-require_once("../config/connectBDD.php");
+require_once("../model/connectBDD.php");
 
 session_start();
 
@@ -31,6 +31,7 @@ if(isset($_POST['username'])){
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <link href="../css/styles.css" rel="stylesheet" type="text/css">
   <title>PokéManiac | Connexion</title>
 </head>
 <body>

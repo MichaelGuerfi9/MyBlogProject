@@ -1,12 +1,12 @@
 <?php
 
-require_once('../model/articleModel.php');
-require_once('../model/commentModel.php');
+require_once('model/articleModel.php');
+require_once('model/commentModel.php');
 
 function showArticles() {
 	$articleModel = new articleModel();
 	$article = $articleModel -> getArticles();
-    include('../view/viewHome.php');
+    include('view/viewHome.php');
 }
 
 function showArticleById($idArticle){
@@ -14,5 +14,5 @@ function showArticleById($idArticle){
 	$article = $articleModel -> getArticle($idArticle);
 	$commentModel = new commentModel();
     $comment = $commentModel -> getComments($idArticle);
-    include('../view/viewArticle.php');
+    include('view/viewArticle.php');
 }

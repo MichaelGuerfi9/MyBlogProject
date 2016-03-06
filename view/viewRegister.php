@@ -1,5 +1,5 @@
 <?php
-require_once("../config/connectBDD.php");
+require_once("../model/connectBDD.php");
 
 session_start();
 
@@ -48,6 +48,7 @@ if (isset($_POST['send']) && $formOK == true) {
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
     <title>PokeManiac | Inscription</title>
 </head>
 <body>

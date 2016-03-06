@@ -1,10 +1,10 @@
 <?php
-    require_once('../config/connectBDD.php');
+    require_once('model/connectBDD.php');
     class articleModel{
         function getArticles(){
             global $bdd;
             $bdd = getBdd();
-            $articles = $bdd->query('SELECT * FROM article ORDER BY art_date DESC');
+            $articles = $bdd->query('SELECT art_id, art_title, art_content,DATE_FORMAT(art_date,"%d/%m/%Y") as date, DATE_FORMAT(art_date,"%H:%i") as heure, use_login FROM article JOIN user ON art_use_id = use_id ORDER BY art_date DESC');
             return $articles;
         }
 
