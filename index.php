@@ -8,10 +8,10 @@ require_once('controller/articleController.php');
                     showArticleById($idArticle);
                 }
                 else
-                    var_dump("Identifiant de billet non valide");
+                    var_dump("Identifiant de l'article non valide");
             }
             else
-                var_dump("Identifiant de billet non défini");
+                var_dump("Identifiant de l'article non défini");
         }
         else
             var_dump("Action non valide");

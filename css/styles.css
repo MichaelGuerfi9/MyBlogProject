@@ -19,7 +19,7 @@ body{
 /***********HEADER***********/
 
 header{
-	display: inline-block;
+	display: block;
 	width: 100%;
 	height: 15%;
 	background-color: #333333;
@@ -40,16 +40,13 @@ header{
 }
 
 #blogTitle{
-	font-family: pokemon;
-	font-size: 2rem;
 	height: 100%;
-	line-height: 2;
-	z-index: 900;
 }
 
-#blogTitle a{
-	text-decoration: none;
-	color:yellow;
+#blogLogo{
+    height: auto;
+    width: 70%;
+    margin-top: 5%;
 }
 
 /****************************/
@@ -62,6 +59,7 @@ header{
 	bottom: 0;
 	color: #95A7B7;
 	right: 100%;
+	overflow: auto;
 	position: fixed;
 	top: 0;
 	width: 25%;
@@ -124,14 +122,28 @@ body.show_sidebar #wrapper {
 	height: 100%;
 }
 
-article{
+.loginBlock {
+	display: none;
+}
+
+.content{
+	height: 100%;
+}
+
+.article{
+	height: 11%;
+	padding: 3%;
+	margin-bottom: 3%;
+}
+
+.articleBlock{
 	height: 11%;
 	padding: 3%;
 	margin-bottom: 3%;
 	border: 2px solid black;
 }
 
-article img{
+.articleBlock img{
 	float: left;
 	height: 100%;
 	width: auto;
@@ -149,7 +161,12 @@ article img{
 }
 
 .onglets{
-	width: 35%;
+	display: none;
+	width: 50%;
+	color: white;
+}
+
+.onglets a{
 	color: white;
 }
 
@@ -182,6 +199,12 @@ article img{
   	header{ 
     	height: 22%;
   	}
+
+  	#blogLogo {
+    	height: auto;
+    	width: 50%;
+   		margin-top: 0%;
+	}
 
  	#push_sidebar ul {
     	margin-left: -2rem;
@@ -217,9 +240,10 @@ article img{
     	font-size: 2rem;
   	}
 
-  	#blogTitle {
-	    font-size: 4rem;
-	    line-height: 2.1;
+  	#blogLogo{
+	    height: auto;
+    	width: 55%;
+    	margin-top: 2%;
 	}
 
 	#hamburgerMenu{
@@ -231,7 +255,7 @@ article img{
 	}
 }
 
-@media only screen and (min-width : 1022px){
+@media only screen and (min-width : 1025px){
 	body{ 
     	font-size: 2rem;
   	}
@@ -240,8 +264,32 @@ article img{
 		display: none;
 	}
 
-	#blogTitle {
-	    font-size: 4rem;
-	    line-height: 1.8;
+	#blogLogo {
+	    height: auto;
+	    width: 34%;
+	    margin-top: 0%;
+	}
+
+	.onglets{
+		display: inline-block;
+	}
+
+	.loginBlock {
+		display: block;
+    	float: left;
+    	font-weight: bold;
+    	padding: 2%;
+    	border: 2px solid black;
+    	font-size: 1.2rem;
+	}
+
+	.article{
+	    float: right;
+	    width: 70%;
+	}
+
+	.articleBlock {
+	    float: right;
+	    width: 70%;
 	}
 }

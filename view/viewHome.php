@@ -1,15 +1,14 @@
-<?php $titre = 'Pokémaniac  | Acceuil';
-session_start();
-?>
+<?php $titre = 'Pokémaniac  | Acceuil'; ?>
 
-<?php
+<?php 
+session_start();
 ob_start(); 
 if(isset($_POST['logout'])){
   unset($_SESSION['user']);
 }
 ?>
 <?php foreach ($article as $articles): ?>
-	<article>
+	<article class='articleBlock'>
 		<img src="images/IconArticle/imgIconDefault.png">
 	    <div class="titleArticle">
 	    	<a href="<?= "index.php?action=article&id=" .$articles['art_id'] ?>"><?= $articles['art_title'] ?></a>
